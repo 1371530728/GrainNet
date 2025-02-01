@@ -1,0 +1,8 @@
+_name: MaEpochs_10-Lr_0.1
+_output: output\MaEpochs_10-Lr_0.1
+_scripts:
+  train: CUDA_VISIBLE_DEVICES=0 python tools/train.py E:/WX/YOLOv7/yolov7-coupling-main/train.py --work-dir 'output\MaEpochs_10-Lr_0.1' --amp --cfg-options train_dataloader.batch_size=48 train_cfg.max_epochs=10 optim_wrapper.optimizer.lr=0.1  > 'output\MaEpochs_10-Lr_0.1\log.train.20240407.182856' 2>&1
+_time: '20240407.182856'
+batch_size: 48
+lr: 0.1
+max_epochs: 10

@@ -1,0 +1,18 @@
+---
+template:
+  train: >
+    python tools/train.py E:/WX/YOLOv7/yolov7-coupling-main/train.py --work-dir {_output} --amp --cfg-options train_dataloader.batch_size={batch_size} train_cfg.max_epochs={max_epochs} optim_wrapper.optimizer.lr={lr}
+
+
+default:
+  batch_size: 48
+  max_epochs: 1
+  lr: 0.1
+
+
+resource: [ 0 ]
+
+---
+max_epochs: [ 10, 100 ]
+lr: [ 0.1, 0.01, 0.001 ]
+
